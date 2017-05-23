@@ -10,8 +10,9 @@ Colors:
 *{
 	margin: 0 auto; 
 	padding: 0;	
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;	
 }
+
 
 header{
 	height: 720px;
@@ -23,7 +24,9 @@ header{
 	background-color: #E56385;
 	padding: 0;  
 	margin: 0; 		
-	color: white;	
+	color: white;
+	position: fixed;  
+	z-index: 9999;	
 }
 
 .logo {
@@ -62,9 +65,14 @@ header{
 }
 
 .fondo{
-	clear: both;	
-	height: 650px;
+	clear: both;
+	position: fixed;
+	z-index: -1;
+	background-size: cover;
+	background-image: url(../img/cropped-Lyft-Promo-Codes-car-1.jpg);	
+	height: 100%;
 	width: 100%;	
+	position: fixed;
 }
 
 .banner{
@@ -100,16 +108,25 @@ header{
 }
 
 .content-form input{
-	width: 350px;
+	width: 400px;
 	height: 20px;
 	margin: 0 0 30px 0;
-	text-decoration: underline;
     background: #EDE9E2;
-    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;    
+    border-bottom: 1px solid #75726C;
+}
+
+.content-form input:focus {
+	outline: 0;
+    box-shadow: none;
+   	border-bottom: 3px solid #00B2A9;
+   	opacity: 0.5;	
 }
 
  [placeholder="PHONE NUMBER"]{
-	opacity: 0.5;
+	opacity: 0.4;
  }
 
 .boton-drive{
@@ -129,7 +146,7 @@ header{
 }
 
 .play{
-	height: 600px;
+	height: 450px;
 	background-color: #00B2A9;
 	margin: 0;
 	padding: 50px 0;
@@ -137,15 +154,168 @@ header{
 
 .play h1{
 	background-color: #EDE9E2;
-	padding: 20px 0;
+	padding: 10px 0;
 	text-align: center;
-	
+	font-size: 3.5em;	
+	font-weight: 600;
+	color: #75726C;
+}
+
+.juego{
+	width: 80%;
+	height: 280px;
+	background-color: #EDE9E2;
+	margin: 70px auto 20px auto;
+}
+
+.ingreso-juego{
+	text-align: center;
+	padding: 40px;
+}
+
+.ingreso-juego input{
+	width: 300px;
+	height: 20px;
+	margin: 50px 20px 60px 10px;
+    background: #EDE9E2;
+}
+
+.ingreso-juego input:focus {
+	outline: 0;
+    box-shadow: none;
+   	border-bottom: 3px solid #00B2A9;
+   	opacity: 0.5;	
+}
+
+
+[placeholder="X coordinate"], [placeholder="Y coordinate"] {
+	opacity: 0.3;
+	font-size: 1.3em;
+ }
+
+.x, .y{
+	border-top: none;
+    border-left: none;
+    border-right: none; 
+	border-bottom: 1px solid #75726C;	
+}
+
+.fa-car{
+	color: #75726C;
+	margin: 0 20px;
+}
+
+
+.ingreso-juego a{
+	padding: 20px 400px;
+	height: 30px;
+	background-color: #00B2A9;
+	border-radius: 10px;
+	color: 	#EDE9E2;
+	text-decoration: none;
+	font-weight: 200;
+	box-shadow: 1px 1px 5px #75726C;	
+}
+
+#el-footer{
+	font-family: 'Roboto', sans-serif;	
+}
+
+footer{	
+	height: 180px;
+	background-color: #75726C;
+	color: #EDE9E2;	
+	padding: 20px 0 0 0;
+}
+
+.texto-footer{
+	float: left;
+	width: 600px;
+	height: 130px;	
+	position: relative;
+	left: 160px;
+	font-weight: 100;	
+}
+
+.texto-footer h2, .link-footer h2{
+	padding-bottom: 20px;
+}
+
+.link-footer{
+	position: relative;
+	left: 220px;
+	font-weight: 200;		
+}
+
+.link-footer li{
+	font-size: 0.93em;
+	list-style: none;	
+}
+
+.link-footer li a{
+	color: #EDE9E2;
+	text-decoration: none;	
+}
+
+.footer{
+	width: 100%;
+	display: inline-block;
+	height: 50px;
+	background-color: #67645F;
+	position: relative;
+}
+
+.footer p{
+	font-size: 0.8em;
+	padding: 20px 0 10px 140px;	
+	font-weight: 200;
+	width: 300px;
+	float: left;
+	opacity: .50;
+}
+
+.footer div{
+	display: inline;
+	position: absolute;
+	right: 150px;
+	padding: 5px 0;
+
+}
+
+.fa-facebook-official, .fa-twitter, .fa-instagram{
+	padding: 13px 0 10px 5px;	
+	color: #EDE9E2;
+	opacity: .50;	
 }
 
 
 
+/* LO DEL JS */
 
 
+.desaparece{
+	display: none;
+}
+
+.la-pista{
+	height: 600px;
+	width: 800px;
+	background-color: #00B2A9;
+	border: 10px solid white;
+}
+
+.mono-cuadro{
+	width: 100px;
+	height: 100px;
+	background-color: #f6bdce;
+	position: relative;
+}
+
+/*
+.el-mono{
+
+}
+*/
 
 
 
