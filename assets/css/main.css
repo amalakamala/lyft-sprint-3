@@ -6,3 +6,148 @@ Colors:
 #75726C;
 #EDE9E2
 */
+
+*{
+	margin: 0 auto; 
+	padding: 0;	
+	font-family: 'Raleway', sans-serif;
+}
+
+header{
+	height: 720px;
+}
+
+.navegador{
+	width: 100%;
+	height: 70px;
+	background-color: #E56385;
+	padding: 0;  
+	margin: 0; 		
+	color: white;	
+}
+
+.logo {
+	width: 350px;
+	margin: 0 auto 0 auto;
+	padding: 12px 10px 0 180px;
+	float: left;
+}
+.logo img { 
+	max-width: 17%; 
+}
+
+.botones li {
+	font-size: 0.93em;
+	list-style: none;	
+	display: inline-block;	
+	margin: 0;
+	padding: 25px 5px;
+	float: left;
+	position: relative;
+	left: 330px;
+}
+
+.botones li a{
+	color: white;
+	text-decoration: none;
+	padding: 25px 15px;	
+	font-weight: 200;
+	margin: 0;		
+}
+
+.botones li a:hover{
+	background-color: #E54E79;
+	padding: 27px 15px;
+	margin: 0;	
+}
+
+.fondo{
+	clear: both;	
+	height: 650px;
+	width: 100%;	
+}
+
+.banner{
+	position: relative;	
+}
+
+.banner .fondo{
+	max-width: 100%; 	
+}
+
+.registrarse{
+	width: 500px;
+	height: 400px;
+	background-color: #EDE9E2;
+	position: absolute; 
+	left: 800px;
+	bottom: 120px;
+}
+
+.content-form{
+	padding: 70px 40px;
+}
+
+.content-form h2{
+	color: #00B2A9;
+	padding: 0 0 15px 0;	
+}
+
+.content-form div{
+	color: #75726C;
+	font-weight: 200;	
+	padding: 0 0 30px 0;
+}
+
+.content-form input{
+	width: 350px;
+	height: 20px;
+	margin: 0 0 30px 0;
+	text-decoration: underline;
+    background: #EDE9E2;
+    border: none;
+}
+
+ [placeholder="PHONE NUMBER"]{
+	opacity: 0.5;
+ }
+
+.boton-drive{
+	padding: 10px 20px;
+	font-size: 0.93em;	
+	background-color: #E56385;
+	border-radius: 10px;
+	font-weight: 200;	
+	color: #EDE9E2;
+	text-decoration: none;
+}
+
+.content-form p{
+	margin: 25px 0 20px 0;
+	color: #75726C;
+	font-size: 0.95em;
+}
+
+.play{
+	height: 600px;
+	background-color: #00B2A9;
+	margin: 0;
+	padding: 50px 0;
+}
+
+.play h1{
+	background-color: #EDE9E2;
+	padding: 20px 0;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+
+
