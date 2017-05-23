@@ -22,19 +22,22 @@ function Auto(posicionX, posicionY){
 	this.posicionY = posicionY;
 
 	this.avanzar = function(){
-		return posicionX + posicionX;
+		return posicionX + 1 ;
 	}
 	this.retroceder = function(){
-		return posicionX - posicionX;
+		return posicionX - 1;
 	}
 	this.derecha = function(){
-		return posicionY + posicionY;
+		return posicionY + 1;
 	}
 	this.izquierda = function(){
-		return posicionY - posicionY;
+		return posicionY - 1;
 	}
-
 }
+
+
+var arregloPista = [["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""]];
+
 
 
 var divStar = document.getElementsByClassName("juego")[0];
@@ -47,24 +50,36 @@ star.addEventListener("click", function(e){
 
 	var x = document.getElementById("la-x").value;
 	var y = document.getElementById("la-y").value;
-	if(parseInt(x) > 10 || parseInt(y) > 7){
+
+	if(parseInt(x) > 10 || parseInt(y) > 6){
 		alert("ingresa un número menor a 10 para X y un número menor a 6 para Y");
+	}else{
+
+		var usuario = new Auto(x,y);
+		arregloPista[x][y] = usuario;
+
+
+		var pista = document.createElement("div");
+		pista.setAttribute("class", "la-pista");
+
+		var monoCuadro = document.createElement("span");
+		monoCuadro.setAttribute("class", "mono-cuadro");
+
+		var mono = document.createElement("img");
+		mono.setAttribute("class", "el-mono");
+
+		monoCuadro.appendChild(mono);
+
+
+		divStar.classList.toggle("desaparece");
+		pista.appendChild(monoCuadro);	
+		areaJuego.appendChild(pista);
+	
 	}
 
-	var pista = document.createElement("div");
-	pista.setAttribute("class", "la-pista");
-
-	var monoCuadro = document.createElement("span");
-	monoCuadro.setAttribute("class", "mono-cuadro");
-
-	var mono = document.createElement("img");
-	mono.setAttribute("class", "el-mono");
-
-	monoCuadro.appendChild(mono);
 
 
-	divStar.classList.toggle("desaparece");
-	areaJuego.appendChild(pista);
+
 })
 
 

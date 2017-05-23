@@ -127,6 +127,7 @@ header{
 
  [placeholder="PHONE NUMBER"]{
 	opacity: 0.4;
+	font-size: 1.2em;
  }
 
 .boton-drive{
@@ -146,7 +147,7 @@ header{
 }
 
 .play{
-	height: 450px;
+	height: 600px;
 	background-color: #00B2A9;
 	margin: 0;
 	padding: 50px 0;
@@ -163,7 +164,7 @@ header{
 
 .juego{
 	width: 80%;
-	height: 280px;
+	height: 300px;
 	background-color: #EDE9E2;
 	margin: 70px auto 20px auto;
 }
@@ -176,7 +177,7 @@ header{
 .ingreso-juego input{
 	width: 300px;
 	height: 20px;
-	margin: 50px 20px 60px 10px;
+	margin: 50px 20px 80px 10px;
     background: #EDE9E2;
 }
 
@@ -292,13 +293,13 @@ footer{
 
 /* LO DEL JS */
 
-
 .desaparece{
 	display: none;
 }
 
 .la-pista{
-	height: 600px;
+	margin-top: 25px;
+	height: 480px;
 	width: 800px;
 	background-color: #00B2A9;
 	border: 10px solid white;
@@ -311,11 +312,11 @@ footer{
 	position: relative;
 }
 
-/*
-.el-mono{
 
+.el-mono{
+	background-image: url(../img/car.png);
 }
-*/
+
 
 
 
