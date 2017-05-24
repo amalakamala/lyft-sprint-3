@@ -22,17 +22,17 @@ function Auto(posicionX, posicionY){
 	this.posicionY = posicionY;
 
 	this.avanzar = function(){
-		return posicionX + 1 ;
-	}
+		arregloPista[y+1][x];
+	};
 	this.retroceder = function(){
-		return posicionX - 1;
-	}
+		arregloPista[y-1][x];
+	};
 	this.derecha = function(){
-		return posicionY + 1;
-	}
+		arregloPista[y][x+1];
+	};
 	this.izquierda = function(){
-		return posicionY - 1;
-	}
+		arregloPista[y][x-1];
+	};
 }
 
 
@@ -98,30 +98,24 @@ start.addEventListener("click", function(e){
 
 
 		/*Movimiento con botones */
-		var laCaja = document.getElementById("caja");
-		laCaja.addEventListener(onkeydown, function (e){
+
+
+		var laCaja = document.getElementsByClassName("el-mono")[0];
+		laCaja.addEventListener("keydown", function (e){
 		
-			var box = document.getElementById("monito");
-
-			var left = x;
-			var top = y;
-
-
 				if(e.keyCode == 39){
-					left += 80;
-					box.style.left = boxLeft + "px";
+					this.derecha;
+					console.log("derecha");
 				}
 				if(e.keyCode == 37){
-					left -= 80;
-					box.style.left = boxLeft + "px";
+					this.izquierda;
+					console.log("izquierda");
 				}
 				if(e.keyCode == 38){
-					top += 80;
-					box.style.top  = boxTop + "px";
+					this.avanzar;
 				}
 				if(e.keyCode == 40){
-					top -= 80;
-					box.style.top  = boxTop + "px";
+					this.retroceder;
 				}
 		})
 
