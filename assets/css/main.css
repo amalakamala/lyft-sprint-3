@@ -73,6 +73,7 @@ header{
 	height: 100%;
 	width: 100%;	
 	position: fixed;
+	background-attachment: fixed;
 }
 
 .banner{
@@ -222,6 +223,10 @@ header{
 	box-shadow: 1px 1px 5px #75726C;	
 }
 
+.ingreso-juego a:hover{
+	background-color: #00A199;	
+}
+
 #el-footer{
 	font-family: 'Roboto', sans-serif;	
 }
@@ -293,6 +298,9 @@ footer{
 	opacity: .50;	
 }
 
+.fa-facebook-official:hover, .fa-twitter:hover, .fa-instagram:hover, .link-footer li a:hover{	
+	color: #E54E79;
+}
 
 
 /* LO DEL JS */

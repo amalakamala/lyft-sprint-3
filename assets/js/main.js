@@ -50,8 +50,8 @@ var arregloPista = [
 var divStar = document.getElementsByClassName("juego")[0];
 var areaJuego = document.getElementsByClassName("juego-final")[0];
 
-var star = document.getElementById("boton-star");
-star.addEventListener("click", function(e){
+var start = document.getElementById("boton-start");
+start.addEventListener("click", function(e){
 	e.preventDefault();
 
 
@@ -96,15 +96,17 @@ star.addEventListener("click", function(e){
 
 		divStar.classList.toggle("desaparece");	
 
-		(function mover(){
-			var laCaja = document.getElementById("caja");
+
+		/*Movimiento con botones */
+		var laCaja = document.getElementById("caja");
+		laCaja.addEventListener(onkeydown, function (e){
+		
 			var box = document.getElementById("monito");
 
 			var left = x;
 			var top = y;
 
-			laCaja.addEventListener(onkeydown,
-			function (e){
+
 				if(e.keyCode == 39){
 					left += 80;
 					box.style.left = boxLeft + "px";
@@ -121,8 +123,7 @@ star.addEventListener("click", function(e){
 					top -= 80;
 					box.style.top  = boxTop + "px";
 				}
-			})
-		})()
+		})
 
 	}
 })
