@@ -297,24 +297,34 @@ footer{
 	display: none;
 }
 
-.la-pista{
-	margin-top: 25px;
-	height: 480px;
+.la-caja{
+	margin-top: 50px;
 	width: 800px;
-	background-color: #00B2A9;
-	border: 10px solid white;
+	height: 480px;
+	border: 5px solid white;
+	position: relative;	
+}
+
+.fila{
+	height: 80px;
+	width: 800px;
+	background-color: #00B2A9;	
 }
 
 .mono-cuadro{
-	width: 100px;
-	height: 100px;
-	background-color: #f6bdce;
-	position: relative;
+	width: 80px;
+	height: 80px;
+	background-color: #00B2A9;
+	display:inline-block;
 }
 
 
 .el-mono{
-	background-image: url(../img/car.png);
+	background-image: url(../img/carF.jpg);
+	width: 80px;
+	height: 80px;	
+	background-color: #f6bdce;
+	position:absolute; 	
 }
 
 

@@ -36,7 +36,14 @@ function Auto(posicionX, posicionY){
 }
 
 
-var arregloPista = [["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""]];
+var arregloPista = [
+	["","","","","","","","","",""],
+	["","","","","","","","","",""],
+	["","","","","","","","","",""],
+	["","","","","","","","","",""],
+	["","","","","","","","","",""],
+	["","","","","","","","","",""]
+];
 
 
 
@@ -51,35 +58,42 @@ star.addEventListener("click", function(e){
 	var x = document.getElementById("la-x").value;
 	var y = document.getElementById("la-y").value;
 
-	if(parseInt(x) > 10 || parseInt(y) > 6){
-		alert("ingresa un número menor a 10 para X y un número menor a 6 para Y");
+	var divCaja = document.createElement("div");
+	divCaja.classList.add("la-caja");
+
+	var imgAuto = document.createElement("img");
+	imgAuto.classList.add("el-mono");
+
+	if(parseInt(x) == "" || parseInt(x) >= 7) {
+		alert("ingresa un número menor a 6 para X");
+	}else if(parseInt(y) >= 11){
+		alert("ingresa un número menor a 10 para Y");
 	}else{
 
+
 		var usuario = new Auto(x,y);
-		arregloPista[x][y] = usuario;
+		arregloPista[y -1][x -1] = "<img class='el-mono'>";
+
+		var fila, cuadro;
+
+		for(var i = 0; i< arregloPista.length; i++){
+		  fila = document.createElement("div");
+		  fila.classList.add("fila");
+		  for(var j = 0; j< arregloPista[i].length; j++){
+		    cuadro = document.createElement("div");
+		    cuadro.innerHTML = arregloPista[i][j];
+		    cuadro.classList.add("mono-cuadro");
+		    fila.appendChild(cuadro);
+
+		  }
+		  divCaja.appendChild(fila);
+		  areaJuego.appendChild(divCaja);
+		}
+		divStar.classList.toggle("desaparece");	
 
 
-		var pista = document.createElement("div");
-		pista.setAttribute("class", "la-pista");
 
-		var monoCuadro = document.createElement("span");
-		monoCuadro.setAttribute("class", "mono-cuadro");
-
-		var mono = document.createElement("img");
-		mono.setAttribute("class", "el-mono");
-
-		monoCuadro.appendChild(mono);
-
-
-		divStar.classList.toggle("desaparece");
-		pista.appendChild(monoCuadro);	
-		areaJuego.appendChild(pista);
-	
 	}
-
-
-
-
 })
 
 
