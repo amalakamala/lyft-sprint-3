@@ -1,4 +1,7 @@
 
+/*
+Funcción Validar Teléfono
+*/
 (function telefono() {
 	var boton =	document.getElementById("boton-phone");
 
@@ -17,6 +20,9 @@
 })()
 
 
+/*
+Clase Auto
+*/
 function Auto(posicionX, posicionY){
 	this.posicionX = posicionX;
 	this.posicionY = posicionY;
@@ -35,7 +41,9 @@ function Auto(posicionX, posicionY){
 	};
 }
 
-
+/*
+Arreglo Coordenadas
+*/
 var arregloPista = [
 	["","","","","","","","","",""],
 	["","","","","","","","","",""],
@@ -46,8 +54,9 @@ var arregloPista = [
 ];
 
 
-
-var divStar = document.getElementsByClassName("juego")[0];
+/*
+Boton Start y creación de área de juego.
+*/
 var areaJuego = document.getElementsByClassName("juego-final")[0];
 
 var start = document.getElementById("boton-start");
@@ -97,7 +106,10 @@ start.addEventListener("click", function(e){
 		divStar.classList.toggle("desaparece");	
 
 
-		/*Movimiento con botones */
+		/*Movimiento con botones 
+		La idea es que el dibujo del auto se mueva a traves del arreglo saltando las coordenada [y][x], al sumarle 1 
+		a aquellas coordenadas realizarian el movimiento. 
+		*/
 
 
 		var laCaja = document.getElementsByClassName("el-mono")[0];
