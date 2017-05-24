@@ -60,38 +60,69 @@ star.addEventListener("click", function(e){
 
 	var divCaja = document.createElement("div");
 	divCaja.classList.add("la-caja");
+	divCaja.setAttribute("id","caja");
 
 	var imgAuto = document.createElement("img");
 	imgAuto.classList.add("el-mono");
+	imgAuto.setAttribute("id","monito");
 
-	if(parseInt(x) == "" || parseInt(x) >= 7) {
-		alert("ingresa un número menor a 6 para X");
-	}else if(parseInt(y) >= 11){
-		alert("ingresa un número menor a 10 para Y");
+	if(parseInt(x) == "" || parseInt(x) >= 11) {
+		alert("ingresa un número menor o igual a 10 para X");
+	}else if(parseInt(y) >= 7){
+		alert("ingresa un número menor o igual a 6 para Y");
 	}else{
 
 
 		var usuario = new Auto(x,y);
-		arregloPista[y -1][x -1] = "<img class='el-mono'>";
+		arregloPista[y-1][x-1] = "<img class='el-mono'>";
 
 		var fila, cuadro;
 
 		for(var i = 0; i< arregloPista.length; i++){
 		  fila = document.createElement("div");
 		  fila.classList.add("fila");
+		  fila.setAttribute("id","rect")
 		  for(var j = 0; j< arregloPista[i].length; j++){
 		    cuadro = document.createElement("div");
 		    cuadro.innerHTML = arregloPista[i][j];
 		    cuadro.classList.add("mono-cuadro");
+		    cuadro.setAttribute("id","box");
 		    fila.appendChild(cuadro);
 
 		  }
 		  divCaja.appendChild(fila);
 		  areaJuego.appendChild(divCaja);
 		}
+
 		divStar.classList.toggle("desaparece");	
 
+		(function mover(){
+			var laCaja = document.getElementById("caja");
+			var box = document.getElementById("monito");
 
+			var left = x;
+			var top = y;
+
+			laCaja.addEventListener(onkeydown,
+			function (e){
+				if(e.keyCode == 39){
+					left += 80;
+					box.style.left = boxLeft + "px";
+				}
+				if(e.keyCode == 37){
+					left -= 80;
+					box.style.left = boxLeft + "px";
+				}
+				if(e.keyCode == 38){
+					top += 80;
+					box.style.top  = boxTop + "px";
+				}
+				if(e.keyCode == 40){
+					top -= 80;
+					box.style.top  = boxTop + "px";
+				}
+			})
+		})()
 
 	}
 })

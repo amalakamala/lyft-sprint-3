@@ -140,6 +140,10 @@ header{
 	text-decoration: none;
 }
 
+.boton-drive:hover{
+	background-color: #E54E79;	
+}
+
 .content-form p{
 	margin: 25px 0 20px 0;
 	color: #75726C;
@@ -308,13 +312,13 @@ footer{
 .fila{
 	height: 80px;
 	width: 800px;
-	background-color: #00B2A9;	
+	background-color: #75726C;	
 }
 
 .mono-cuadro{
 	width: 80px;
 	height: 80px;
-	background-color: #00B2A9;
+	background-color: #75726C;
 	display:inline-block;
 }
 
@@ -323,7 +327,7 @@ footer{
 	background-image: url(../img/carF.jpg);
 	width: 80px;
 	height: 80px;	
-	background-color: #f6bdce;
+	background-color: #75726C;
 	position:absolute; 	
 }
 
